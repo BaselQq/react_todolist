@@ -1,12 +1,12 @@
 import TaskForm from "./TaskForm";
 
-const AddTask = () => {
+const AddTask = (props) => {
 const saveTaskHandler = (enteredTask) => {
     const tasksData = {
         ...enteredTask,
         id: Math.random().toString()
     };
-    console.log(tasksData);
+    props.onAddedTasks(tasksData);
 }
 
 return (
