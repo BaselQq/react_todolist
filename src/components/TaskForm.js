@@ -11,7 +11,7 @@ const TaskForm = (props) => {
         event.preventDefault();
 
         const tasksData = {
-            tasks: enteredTask
+            title: enteredTask
         };
         
         props.onAddTask(tasksData);
