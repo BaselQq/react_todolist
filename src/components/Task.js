@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Task = (props) => {
+  const [isExisted, setExisted] = useState(true);
+
+const deleteTask = () => {
+  setExisted(false);
+};
+
   return (
     <div>
-      <h2>{props.title}</h2>
+      {isExisted && <h2>{props.title}</h2>}
+      <div>
+      {isExisted && <button onClick={deleteTask}>Delete</button>}
+      </div>
     </div>
   );
 };
