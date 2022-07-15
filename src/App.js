@@ -22,7 +22,6 @@ function App() {
     setTasks((prevTaskList) => {
       return [enteredTask, ...prevTaskList];
     });
-    console.log(enteredTask)
   };
 
   return (
