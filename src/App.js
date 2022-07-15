@@ -5,23 +5,24 @@ import TaskList from "./components/TaskList";
 
 const DUMMY_TASKS = [
   {
-    key: "1",
+    id: "1",
     title: "testing Purpose Task 1",
   },
   {
-    key: "2",
+    id: "2",
     title: "testing Purpose Task 2",
   },
 ];
 
 function App() {
   const [tasks, setTasks] = useState(DUMMY_TASKS);
-  console.log(tasks);
+  // console.log(tasks);
 
   const addTasksInApp = (enteredTask) => {
     setTasks((prevTaskList) => {
       return [enteredTask, ...prevTaskList];
     });
+    console.log(enteredTask)
   };
 
   return (
