@@ -1,15 +1,22 @@
+import { useState } from "react";
 import Task from "./Task";
 
 const TaskList = (props) => {
+  const [allTasks, setAllTasks] = useState(props.tasks);
+
+  const clearAllTasks = () => {
+    setAllTasks(false);
+  };
+
   return (
-    <ul>
+    <div>
+      {allTasks && <ul>
         {props.tasks.map((enteredTask) => (
-          <Task
-            key={enteredTask.id}
-            title={enteredTask.title}
-          />
+          <Task key={enteredTask.id} title={enteredTask.title} />
         ))}
-    </ul>
+      </ul>}
+      <button onClick={clearAllTasks}>Clear all Tasks</button>
+    </div>
   );
 };
 
