@@ -3,16 +3,7 @@ import "./App.css";
 import { useState } from "react";
 import TaskList from "./components/TaskList";
 
-const DUMMY_TASKS = [
-  {
-    id: "1",
-    title: "testing Purpose Task 1",
-  },
-  {
-    id: "2",
-    title: "testing Purpose Task 2",
-  },
-];
+const DUMMY_TASKS = [];
 
 function App() {
   const [tasks, setTasks] = useState(DUMMY_TASKS);
